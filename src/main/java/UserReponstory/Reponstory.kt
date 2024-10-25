@@ -1,4 +1,0 @@
-package UserReponstory
-
-interface Reponstory {
-}
