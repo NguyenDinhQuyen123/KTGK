@@ -1,3 +1,4 @@
+package com.example.demo;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("User API Documentation")
                         .version("1.0")
-                        .description("API documentation for managing users"));
+                        .description("API documentation for managing products"));
     }
 }

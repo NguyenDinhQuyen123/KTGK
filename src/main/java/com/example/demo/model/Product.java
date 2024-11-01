@@ -1,22 +1,27 @@
 package com.example.demo.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
-public class User{
+@Table(name = "products")
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    private String email;
-    //table (name="user")
+    private String description; // Thêm mô tả
+    private double price;       // Thêm giá
 
-    public User(int id, String name, String email) {
 
+    public Product(int id, String name, String description, double price) {
         this.id = id;
         this.name = name;
-        this.email = email;
+        this.description = description;
+        this.price = price;
+
     }
+
+    public Product() {}
 
     public int getId() {
         return id;
@@ -34,15 +39,22 @@ public class User{
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getDescription() {
+        return description;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public User() {
-
+    public double getPrice() {
+        return price;
     }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+
+
 }
